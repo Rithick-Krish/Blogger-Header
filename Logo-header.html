@@ -23,20 +23,20 @@
       white-space: nowrap;
       text-decoration: none;
     }
-.logo img {
+    .logo img {
   display: flex;
   height: 50px; /* Increased desktop size */
   max-width: 100%;
   object-fit: contain;
 }
 
-@media (max-width: 1032px) {
+  @media (max-width: 1032px) {
   .logo img {
     height: 40px; /* Increased */
   }
 }
 
-@media (max-width: 480px) {
+  @media (max-width: 480px) {
   .logo img {
     height: 40px; /* Increased */
   }
@@ -201,24 +201,26 @@
     }
   </style>
 
-  <a class="logo" href="/">
+   <a class="logo" href="/">
   <img alt="Anime Tamil Voice Logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiEbivIOCutDbAyR8qplzQvqx4OxWn5CJ5JNjb1yR9MpvsqF8pH__5q81I0Hgj_Di35Fsin7U8iF6Dr_5amkdkq1yAP-mRxuuWVWwK4Zu2uCf5xxW348jcrqAR2F-VsRJvgYq3UnYeQrHINSifvhKDpybMK_z6KeW7tPKxcruPbroagOva1vWY3_RZrPcNJ/s1800/Web-logo-2.png" />
 </a>
 
   <form class="search-bar" id="customSearchForm">
-    <input id="searchQuery" placeholder="Search Anime…" required="" type="text" />
+    <input type="text" id="searchQuery" placeholder="Search Anime…" required>
     <button type="submit">
-      <svg fill="none" stroke-width="1.5" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" stroke-linecap="round" stroke-linejoin="round"></path>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"></path>
       </svg>
     </button>
   </form>
 
-  <input id="menu-toggle" type="checkbox" />
-  <label class="nav-toggle">
-    <svg fill="none" stroke-width="1.5" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round">
-    </path></svg>
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="nav-toggle">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+    </svg>
   </label>
 
   <ul class="nav-menu">
