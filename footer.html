@@ -1,0 +1,63 @@
+<style>
+  /* ===== Footer Styling ===== */
+  #custom-footer {
+    background: #1e1e1e;
+    color: #fff;
+    padding: 20px 15px;
+    font-size: 14px;
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .footer-left p {
+    margin: 0;
+  }
+
+  .footer-nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+  }
+
+  .footer-nav a:hover {
+    color: #a58eff; /* lavender hover */
+  }
+
+  /* Responsive Footer */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      text-align: center;
+    }
+    .footer-nav {
+      margin-top: 10px;
+    }
+  }
+</style>
+<footer id="custom-footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <p>&copy; 2025 Anime Tamil Voice. All Rights Reserved.</p>
+    </div>
+
+    <div class="footer-right">
+      <nav class="footer-nav">
+        <a href="/">Home</a>
+        <a href="/p/about.html">About</a>
+        <a href="/p/privacy-policy.html">Privacy</a>
+        <a href="/p/contact.html">Contact</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+
