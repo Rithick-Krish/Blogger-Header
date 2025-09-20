@@ -1,0 +1,100 @@
+<footer id="custom-footer">
+  <style>
+    /* ====== Footer CSS Inline ====== */
+    footer#custom-footer {
+      background: #0f0f1a;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #aaa;
+      width: 100%;
+      max-width: 100vw;
+      margin: 0;
+      border-top: 1px solid #333;
+      flex-shrink: 0;
+      box-sizing: border-box;
+      position: relative;
+      left: 0;
+      right: 0;
+    }
+
+    #footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .footer-text {
+      margin: 0 0 15px 0;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+      margin: 0;
+    }
+
+    .footer-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.85rem;
+      transition: color 0.3s ease;
+      padding: 5px 0;
+    }
+
+    .footer-links a:hover {
+      color: #D280FF;
+    }
+
+    /* Mobile Footer Styles */
+    @media (max-width: 768px) {
+      footer#custom-footer {
+        padding: 15px 0;
+      }
+      
+      .footer-links {
+        gap: 15px;
+      }
+      
+      .footer-links a {
+        font-size: 0.8rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      footer#custom-footer {
+        padding: 15px 0;
+      }
+      
+      .footer-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+      }
+      
+      .footer-links a {
+        font-size: 0.9rem;
+        padding: 8px 0;
+      }
+    }
+  </style>
+
+  <div id="footer-content">
+    <p class="footer-text">© 2025 Anime Tamil Voice | Powered by Blogger</p>
+    <div class="footer-links">
+      <a href="https://rithickkrish.blogspot.com/p/about-us.html">About Us</a>
+      <a href="https://rithickkrish.blogspot.com/p/contact.html">Contact Us</a>
+      <a href="https://rithickkrish.blogspot.com/p/privacy-policy.html">Privacy Policy</a>
+    </div>
+  </div>
+
+  <script>
+    // Footer-specific scripts can go here if needed
+    console.log('Footer loaded successfully');
+  </script>
+</footer>
