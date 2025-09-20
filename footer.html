@@ -5,6 +5,7 @@
     color: #fff;
     padding: 20px 15px;
     font-size: 14px;
+    margin: 0; /* remove any extra space outside footer */
   }
 
   .footer-container {
@@ -32,6 +33,22 @@
     color: #a58eff; /* lavender hover */
   }
 
+  /* Remove unwanted extra space */
+  #footer-container {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    margin: 0; /* reset browser default margin */
+  }
+
+  .content-outer,
+  .page_body {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
   /* Responsive Footer */
   @media (max-width: 768px) {
     .footer-container {
@@ -43,6 +60,7 @@
     }
   }
 </style>
+
 <footer id="custom-footer">
   <div class="footer-container">
     <div class="footer-left">
