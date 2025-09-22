@@ -15,6 +15,35 @@
       z-index: 1000;
       overflow-x: hidden;
     }
+    
+    /* Header Left Section - EXACT Action page style */
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+    
+    /* Back Button - EXACT Action page styling, always visible */
+    .back-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #fff;
+      transition: color 0.3s;
+      display: flex; /* Always visible */
+      align-items: center;
+    }
+    
+    .back-button:hover {
+      color: #ffcc00;
+    }
+    
+    .back-button svg {
+      width: 24px; /* Default desktop size */
+      height: 24px;
+    }
+    
     .logo {
       font-size: 24px;
       color: #ffcc00;
@@ -24,32 +53,21 @@
       text-decoration: none;
     }
     .logo img {
-  display: flex;
-  height: 50px; /* Increased desktop size */
-  max-width: 100%;
-  object-fit: contain;
-}
-
-  @media (max-width: 1032px) {
-  .logo img {
-    height: 40px; /* Increased */
-  }
-}
-
-  @media (max-width: 480px) {
-  .logo img {
-    height: 40px; /* Increased */
-  }
-}
+      display: flex;
+      height: 50px; /* Desktop size */
+      max-width: 100%;
+      object-fit: contain;
+    }
 
     .search-bar {
       display: flex;
       align-items: center;
-      width:  40%;
+      width: 40%;
       background-color: #292929;
       border-radius: 5px;
       margin: 0 10px;
       flex-shrink: 0;
+      overflow: visible;
     }
     .search-bar input {
       flex: 1;
@@ -84,6 +102,7 @@
       height: 20px;
       vertical-align: middle;
     }
+    
     /* Hamburger toggle */
     #menu-toggle {
       display: none;
@@ -122,15 +141,31 @@
     .nav-menu a:hover {
       color: #ffcc00;
     }
-    /* Responsive / mobile view */
+
+    /* Tablet Styles (769px - 1032px) - Scale down back button */
     @media (max-width: 1032px) {
       header#custom-header {
         padding: 8px 10px;
         gap: 5px;
       }
-      .logo {
-        font-size: 16px;
+      
+      .header-left {
+        gap: 8px;
       }
+      
+      /* Scale back button on tablet */
+      .back-button svg {
+        width: 22px;
+        height: 22px;
+      }
+      
+      .logo {
+        font-size: 18px;
+      }
+      .logo img {
+        height: 40px;
+      }
+      
       .search-bar {
         width: 50%;
         margin: 0 5px;
@@ -173,15 +208,67 @@
         font-size: 14px;
       }
     }
+
+    /* Mobile Styles (≤ 768px) - EXACT Action page mobile breakpoint, scale down back button */
+    @media (max-width: 768px) {
+      header#custom-header {
+        padding: 8px 10px;
+      }
+      
+      .header-left {
+        gap: 8px;
+      }
+      
+      .back-button svg {
+        width: 20px;
+        height: 20px;
+      }
+      
+      .logo {
+        font-size: 16px;
+      }
+      .logo img {
+        height: 35px;
+      }
+      
+      .search-bar {
+        width: 120px; /* EXACT Action page mobile search width */
+        margin: 0 5px;
+      }
+      .search-bar input {
+        font-size: 10px;
+        padding: 8px;
+      }
+      .search-bar button {
+        padding: 8px 10px;
+      }
+      .search-bar button svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    /* Extra Small Mobile (≤ 480px) - Further scale down */
     @media (max-width: 480px) {
       header#custom-header {
         padding: 8px 5px;
       }
-      .logo {
-        font-size: 14px;
+      
+      .header-left {
+        gap: 6px;
       }
+      
+      .back-button svg {
+        width: 20px;
+        height: 20px;
+      }
+      
+      .logo img {
+        height: 32px;
+      }
+      
       .search-bar {
-        width: 50%;
+        width: 45%;
         margin: 0 3px;
       }
       .search-bar input {
@@ -191,19 +278,56 @@
       .search-bar button {
         padding: 6px 8px;
       }
-      .nav-menu {
-        width: 160px;
-        padding: 10px 15px;
-        padding-right: 0px;
-        margin-right: 0px;
-        margin-top: 0px;
+    }
+
+    /* Extra Small Mobile (≤ 360px) - Smallest scale */
+    @media (max-width: 360px) {
+      header#custom-header {
+        padding: 6px 3px;
+      }
+      
+      .header-left {
+        gap: 4px;
+      }
+      
+      .back-button svg {
+        width: 18px;
+        height: 18px;
+      }
+      
+      .logo img {
+        height: 30px;
+      }
+      
+      .search-bar {
+        width: 40%;
+      }
+      .search-bar input {
+        font-size: 8px;
+        padding: 5px;
+      }
+      .search-bar button {
+        padding: 5px 6px;
+      }
+      .search-bar button svg {
+        width: 14px;
+        height: 14px;
       }
     }
   </style>
 
-   <a class="logo" href="/">
-  <img alt="Anime Tamil Voice Logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiEbivIOCutDbAyR8qplzQvqx4OxWn5CJ5JNjb1yR9MpvsqF8pH__5q81I0Hgj_Di35Fsin7U8iF6Dr_5amkdkq1yAP-mRxuuWVWwK4Zu2uCf5xxW348jcrqAR2F-VsRJvgYq3UnYeQrHINSifvhKDpybMK_z6KeW7tPKxcruPbroagOva1vWY3_RZrPcNJ/s1800/Web-logo-2.png" />
-</a>
+  <!-- Header Left Section - EXACT Action page structure -->
+  <div class="header-left">
+    <button class="back-button" onclick="history.back()" title="Go Back">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+      </svg>
+    </button>
+    
+    <a class="logo" href="/">
+      <img alt="Anime Tamil Voice Logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiEbivIOCutDbAyR8qplzQvqx4OxWn5CJ5JNjb1yR9MpvsqF8pH__5q81I0Hgj_Di35Fsin7U8iF6Dr_5amkdkq1yAP-mRxuuWVWwK4Zu2uCf5xxW348jcrqAR2F-VsRJvgYq3UnYeQrHINSifvhKDpybMK_z6KeW7tPKxcruPbroagOva1vWY3_RZrPcNJ/s1800/Web-logo-2.png" />
+    </a>
+  </div>
 
   <form class="search-bar" id="customSearchForm">
     <input type="text" id="searchQuery" placeholder="Search Anime…" required>
@@ -243,7 +367,8 @@
         }
       });
     }
-        // Close menu when clicking outside
+
+    // Close menu when clicking outside
     document.addEventListener('click', (e) => {
       const menuToggle = document.getElementById('menu-toggle');
       const header = document.getElementById('custom-header');
